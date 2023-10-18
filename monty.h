@@ -46,7 +46,7 @@ void the_push(stack_t **stack, unsigned int ln_nm);
 void the_pall(stack_t **stack, unsigned int ln_nm);
 void the_pint(stack_t **stack, unsigned int ln_nm);
 void free_stack(stack_t *stack);
-instruction_t *tget_insts(char *op_code);
+instruction_t *get_insts(char *op_code);
 int monty_interpreter(char *filename);
 
 #endif

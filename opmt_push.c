@@ -18,7 +18,7 @@ void the_push(stack_t **stack, unsigned int ln_nm)
 	}
 
 	the_arg = strtok(NULL, " \t\n");
-	if (!the_arg || !isdigit(*the_arg) && *the_arg != '-')
+	if (!the_arg || (!isdigit(*the_arg) && (*the_arg != '-')))
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", ln_nm);
 		exit(EXIT_FAILURE);

@@ -26,7 +26,7 @@ int monty_interpreter(char *filename)
 		opcode = strtok(the_line, " \t\n");
 		if (!opcode || *opcode == '#')
 			continue;
-		insts = tget_insts(opcode);
+		insts = get_insts(opcode);
 		if (!insts)
 		{
 			fprintf(stderr, "L%u: unknown instruction %s\n", ln_nm, opcode);
