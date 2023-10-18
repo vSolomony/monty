@@ -13,5 +13,5 @@ void to_add(stack_t **stack, unsigned int ln_nm)
 	}
 
 	(*stack)->next->n += (*stack)->n;
-	pop(stack, ln_nm);
+	to_pop(stack, ln_nm);
 }

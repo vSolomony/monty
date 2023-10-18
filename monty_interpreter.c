@@ -7,9 +7,7 @@
 int monty_interpreter(char *filename)
 {
 	FILE *the_file;
-	char *the_line = NULL;
-	size_t len = 0;
-	ssize_t to_read;
+	char the_line[256];
 	unsigned int ln_nm = 0;
 	stack_t *stack = NULL;
 	instruction_t *insts = NULL;
@@ -22,7 +20,7 @@ int monty_interpreter(char *filename)
 		return (EXIT_FAILURE);
 	}
 
-	while ((to_read = getline(&the_line, &len, the_file)) != -1)
+	while (fgets(the_line, sizeof(the_line), the_file) != NULL)
 	{
 		ln_nm++;
 		opcode = strtok(the_line, " \t\n");
@@ -32,7 +30,6 @@ int monty_interpreter(char *filename)
 		if (!insts)
 		{
 			fprintf(stderr, "L%u: unknown instruction %s\n", ln_nm, opcode);
-			free(the_line);
 			fclose(the_file);
 			free_stack(stack);
 			return (EXIT_FAILURE);
@@ -40,7 +37,6 @@ int monty_interpreter(char *filename)
 		insts->f(&stack, ln_nm);
 	}
 
-	free(the_line);
 	fclose(the_file);
 	free_stack(stack);
 	return (EXIT_SUCCESS);
