@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
- * the_push - to push element
+ * push - to push element
  * @stack: pointer address of head stack
  * @ln_nm: the line number
  */
-void the_push(stack_t **stack, unsigned int ln_nm)
+void push(stack_t **stack, unsigned int ln_nm)
 {
 	char *the_arg;
 	int the_value;

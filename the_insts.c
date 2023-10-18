@@ -10,13 +10,13 @@ instruction_t *get_insts(char *op_code)
 	size_t i;
 
 	instruction_t inst[] = {
-		{"push", the_push},
-		{"pall", the_pall},
-		{"pint", the_pint},
-		{"pop", to_pop},
-		{"swap", to_swap},
-		{"add", to_add},
-		{"nop", the_nop},
+		{"push", push},
+		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}};
 
 	for (i = 0; inst[i].opcode; i++)

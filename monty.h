@@ -38,13 +38,13 @@ typedef struct instruction_s
 } instruction_t;
 
 /* Functions*/
-void to_add(stack_t **stack, unsigned int ln_nm);
-void to_swap(stack_t **stack, unsigned int ln_nm);
-void to_pop(stack_t **stack, unsigned int ln_nm);
-void the_nop(stack_t **stack, unsigned int ln_nm);
-void the_push(stack_t **stack, unsigned int ln_nm);
-void the_pall(stack_t **stack, unsigned int ln_nm);
-void the_pint(stack_t **stack, unsigned int ln_nm);
+void add(stack_t **stack, unsigned int ln_nm);
+void swap(stack_t **stack, unsigned int ln_nm);
+void pop(stack_t **stack, unsigned int ln_nm);
+void nop(stack_t **stack, unsigned int ln_nm);
+void push(stack_t **stack, unsigned int ln_nm);
+void pall(stack_t **stack, unsigned int ln_nm);
+void pint(stack_t **stack, unsigned int ln_nm);
 void free_stack(stack_t *stack);
 instruction_t *get_insts(char *op_code);
 int monty_interpreter(char *filename);

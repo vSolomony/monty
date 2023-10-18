@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
- * the_pall - to print all the values of the stack
+ * pall - to print all the values of the stack
  * @stack: adress pointer of the head stack
  * @ln_nm: Line number in Monty byte code file.
  */
-void the_pall(stack_t **stack, unsigned int ln_nm)
+void pall(stack_t **stack, unsigned int ln_nm)
 {
 	stack_t *current = *stack;
 

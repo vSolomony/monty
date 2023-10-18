@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
- * to_swap - swap top two elements in the stack
+ * swap - swap top two elements in the stack
  * @stack: address of head pointer of stack
  * @ln_nm: Line number
  */
-void to_swap(stack_t **stack, unsigned int ln_nm)
+void swap(stack_t **stack, unsigned int ln_nm)
 {
 	int temp;
 

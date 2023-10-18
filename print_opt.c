@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
- * the_pint - prints value of the top
+ * pint - prints value of the top
  * @stack: head pointer address of stack
  * @ln_nm: the line number
  */
-void the_pint(stack_t **stack, unsigned int ln_nm)
+void pint(stack_t **stack, unsigned int ln_nm)
 {
 	if (!stack || !*stack)
 	{

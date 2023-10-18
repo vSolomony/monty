@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
- * to_pop - Pop the top element in the stack
+ * pop - Pop the top element in the stack
  * @stack: address of head pointer in stack
  * @ln_nm: line number
  */
-void to_pop(stack_t **stack, unsigned int ln_nm)
+void pop(stack_t **stack, unsigned int ln_nm)
 {
 	stack_t *temp;
 
