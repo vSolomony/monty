@@ -48,5 +48,13 @@ void pint(stack_t **stack, unsigned int ln_nm);
 void free_stack(stack_t *stack);
 instruction_t *get_insts(char *op_code);
 int monty_interpreter(char *filename);
+void mod(stack_t **stack, unsigned int ln_nm);
+void mul(stack_t **stack, unsigned int ln_nm);
+void sub(stack_t **stack, unsigned int ln_nm);
+void _div(stack_t **stack, unsigned int ln_nm);
+void pchar(stack_t **stack, unsigned int ln_nm);
+void pstr(stack_t **stack, unsigned int ln_nm);
+void rotl(stack_t **stack, unsigned int ln_nm);
+void rotr(stack_t **stack, unsigned int ln_nm);
 
 #endif

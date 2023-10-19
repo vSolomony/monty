@@ -23,9 +23,14 @@ int monty_interpreter(char *filename)
 	while (fgets(the_line, sizeof(the_line), the_file) != NULL)
 	{
 		ln_nm++;
+
+		if (the_line[0] == '#')
+			continue;
+
 		opcode = strtok(the_line, " \t\n");
 		if (!opcode || *opcode == '#')
 			continue;
+
 		insts = get_insts(opcode);
 		if (!insts)
 		{
@@ -36,7 +41,6 @@ int monty_interpreter(char *filename)
 		}
 		insts->f(&stack, ln_nm);
 	}
-
 	fclose(the_file);
 	free_stack(stack);
 	return (EXIT_SUCCESS);
